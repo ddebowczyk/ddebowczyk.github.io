@@ -1,7 +1,14 @@
 ---
 layout: post
 title: Make JAR of Gosu classes using Vark build tool
-categories: [gosu, vark, jar, build, ant, distribution]
+categories: [programming, gosu]
+tags:
+ - gosu
+ - vark
+ - ant
+ - build
+ - jar
+ - packaging
 ---
 
 When your Gosu scripts become more complicated, you might want to split some of the classes into separate modules. In other case you might need to reuse part of the Gosu code across several applications.
@@ -13,8 +20,8 @@ Alternative and elegant solution is to package the group of the Gosu sources as 
 Prerequisites
 
 - Installed Java SDK 1.7+, my version was 1.7.0_17
-- Installed latest version of Gosu language (http://gosu-lang.org/), my version was 0.10.2
-- Installed latest version of Aardvark - Gosu build tool (http://vark.github.io/), my version was 0.4
+- Installed latest version of [Gosu](http://gosu-lang.org/) language, my version was 0.10.2
+- Installed latest version of [Aardvark](http://vark.github.io/) - Gosu build tool, my version was 0.4
 - Installed Ant - Java build tool, my version was 1.7.1
 
 Steps to create Vark build file that will make JAR with your Gosu sources
