@@ -17,21 +17,21 @@ One of the options is to just copy reused sources across all applications that r
 
 Alternative and elegant solution is to package the group of the Gosu sources as JAR file and refer to them from Gosu script just as you would do with plain Java JARs. I didn't find any guide on how to do that, so here is short explanation on how to achieve that.
 
-Prerequisites
+Prerequisites:
 
 - Installed Java SDK 1.7+, my version was 1.7.0_17
 - Installed latest version of [Gosu](http://gosu-lang.org/) language, my version was 0.10.2
 - Installed latest version of [Aardvark](http://vark.github.io/) - Gosu build tool, my version was 0.4
 - Installed Ant - Java build tool, my version was 1.7.1
 
-Steps to create Vark build file that will make JAR with your Gosu sources
+Steps to create Vark build file that will make JAR with your Gosu sources:
 
 1. Create a separate project directory for the group of sources you want to reuse across several scripts or applications, ie. /mylib
 1. Put your Gosu files to be packaged in JAR into one directory, ie. /mylib/src
 1. Create Vark build file /mylib/build.vark containing following instructions:
 
 <pre>
-  <code class="gosu">
+<code class="gosu">
 var libName = "mylibrary"
 var libVersion = "0.1"
 
@@ -49,7 +49,7 @@ function dist() {
 function clean() {
  Ant.delete(:dir = distDir)
 }
-  </code>
+</code>
 </pre>
 
 Now you should be able to call Vark from /mylib directory:
@@ -65,11 +65,11 @@ If you want to refer to mylib.jar from any Gosu program (.gsp), just place mylib
 See top section of an example program myprogram.gsp using JAR with your Gosu classes below.
 
 <pre>
-  <code class="gosu">
+<code class="gosu">
 classpath "lib/mylibrary-0.1.jar"
 
 uses mylibrary.*
 
 // etc...
-  </code>
+</code>
 </pre>
