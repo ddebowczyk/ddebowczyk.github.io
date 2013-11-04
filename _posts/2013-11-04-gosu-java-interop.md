@@ -18,6 +18,8 @@ It is not so straightforward to do opposite, as Gosu relies on its own classload
 
 As Gosu's syntax is more powerful and less explicit than Java, wouldn't it be nice to be able to write at least parts of your application in it? Here is how you can do it.
 
+> Original idea of the solution comes from: https://gist.github.com/am2605/1577272
+
 # Solution overview
 
 General idea is to:
