@@ -42,8 +42,12 @@ Both Gosu provider and Java consumer will share dependency on the interface defi
 - Select "Dependencies" tab and use green "+" icon on the right size of dependencies list.
 - Select "Module dependency" and choose "java-api" and "gosu-provider" from the list.
 
-Make sure, your module SDKs are pointing to:
-Gosu SDK
+Make sure your module SDKs are pointing to:
+
+- java-api - Java SDK (1.7 in my case)
+- java-consumer, gosu-provider - Gosu SDK
+
+> *WARNING:* I've been experiencing problems with IntelliJ Idea 12.1.6 while trying to make it run Try your luck with IJ 12.1.4. This is what I used for this example.
 
 # Code
 
@@ -75,7 +79,7 @@ class ServiceProvider implements ServiceApi {
   construct() {
   }
 
-  function execute() : String {
+  override function execute() : String {
     return "Hello from Gosu service"
   }
 }
@@ -107,9 +111,9 @@ public class ServiceConsumer {
     public String consume() {
         List<File> gosuPath = new ArrayList<File>();
         // path to libraries
-        gosuPath.add(new File("c:/work/projects/sandbox/gosu-java-interop/lib/"));
+        gosuPath.add(new File("c:/work/projects/sandbox/java-gosu-interop/lib/"));
         // path to gosu sources
-        gosuPath.add(new File("c:/work/projects/sandbox/gosu-java-interop/src/gosu/"));
+        gosuPath.add(new File("c:/work/projects/sandbox/java-gosu-interop/gosu-provider/src/"));
         Gosu.init(gosuPath);
         ServiceApi service = (ServiceApi) ReflectUtil.construct("sample.provider.ServiceProvider");
         return service.execute();
@@ -134,5 +138,7 @@ To run your Java ServiceConsumer which executes Gosu code:
 - select ServiceConsumer as main class,
 - set "Use classpath of module" to "java-consumer" module,
 - hit "Run".
+
+You will find source code for this at [GitHub](https://github.com/ddebowczyk/java-gosu-interop).
 
 Have fun.
