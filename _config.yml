@@ -3,6 +3,7 @@ pygments: true
 url: http://ddebowczyk.github.io
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore]
+markdown: redcarpet
 
 # Theme customization - please change from the defaults!
 theme:
