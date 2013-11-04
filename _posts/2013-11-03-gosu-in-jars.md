@@ -58,7 +58,7 @@ Now you should be able to call Vark from /mylib directory:
 
  To use your newly created JAR in Gosu apps just put it on classpath of your Gosu application.
 
-> WARNING: Gosu files were not compiled by our Vark script , so you won't be able to use Gosu classes directly from Java code.
+> **WARNING:** Gosu files were not compiled by our Vark script , so you won't be able to use Gosu classes directly from Java code.
 
 If you want to refer to mylib.jar from any Gosu program (.gsp), just place mylibrary-0.1.jar (or however you named it) in /lib directory of the program and don't forget to point to it in your classpath declaration.
 

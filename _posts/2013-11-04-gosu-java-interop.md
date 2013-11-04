@@ -47,7 +47,7 @@ Make sure your module SDKs are pointing to:
 - java-api - Java SDK (1.7 in my case)
 - java-consumer, gosu-provider - Gosu SDK
 
-> *WARNING:* I've been experiencing problems with IntelliJ Idea 12.1.6 while trying to make it run Try your luck with IJ 12.1.4. This is what I used for this example.
+> **WARNING:** I've been experiencing problems with IntelliJ Idea 12.1.6 while trying to make it run. Try your luck with IJ 12.1.4. This is what I used for this example.
 
 # Code
 
@@ -143,4 +143,6 @@ You will find source code for this at [GitHub](https://github.com/ddebowczyk/jav
 
 Have fun.
 
-> *CREDITS:* Original idea of the described solution comes from: https://gist.github.com/am2605/1577272
+**CREDITS:**
+
+- Idea of the solution comes from: (https://gist.github.com/am2605/1577272)

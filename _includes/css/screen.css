@@ -221,6 +221,10 @@ i.fa-hn {
   color: white;
 }
 
+#related h3 {
+  margin-top: 64px;
+}
+
 .home {
   font-size: 24px;
   float: right;
