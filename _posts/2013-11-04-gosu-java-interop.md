@@ -12,7 +12,7 @@ tags:
 
 # Why
 
-Java is trivial to call from [Gosu](http://gosu-lang.org/). Just put Java JARs on the Gosu classpath, declare Java class usage declaration and you are ready to go.
+Java is trivial to call from [Gosu](http://gosu-lang.org/). Just put Java JARs on the Gosu classpath, add Java class usage declaration and you are ready to go.
 
 It is not so straightforward to do opposite, as Gosu relies on its own classloader which makes its magical tricks like [Open Type System](http://devblog.guidewire.com/2010/11/18/gosus-secret-sauce-the-open-type-system/) possible.
 
